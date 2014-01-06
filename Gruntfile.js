@@ -1,8 +1,13 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        execute: {
+        exec: {
             build: {
-                src: ['./utils/build/build.js']
+                cwd: './utils/build/',
+                command: 'node build.js --include common --include extras --output ../../build/three.js'
+            },
+            build_min: {
+                cwd: './utils/build/',
+                command: 'node build.js --include common --include extras --minify --output ../../build/three.min.js'
             }
         },
 
@@ -14,8 +19,8 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-execute');
+    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-browserify2');
 
-    grunt.registerTask('default', ['execute:build', 'browserify2:compile']);
+    grunt.registerTask('default', ['exec', 'browserify2:compile']);
 };

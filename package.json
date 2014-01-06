@@ -8,18 +8,19 @@
         "web": "http://stackoverflow.com/questions/tagged/three.js"
     },
 
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/lutangar/three.js.git#npm"
+    },
+
     "devDependencies": {
     	"uglify-js2": "*",
     	"argparse" : "*",
         "grunt": "latest",
-        "grunt-execute": "latest",
+        "grunt-exec": "latest",
         "grunt-browserify2": "latest"
     },
-    
-    "repository" : {
-        "type" : "git",
-         "url" : "git://github.com/lutangar/three.js.git#npm"
-    },
+
     "licenses": [{
         "type": "The MIT License",
         "url": "https://raw.github.com/mrdoob/three.js/master/LICENSE"
