@@ -50,11 +50,11 @@ function main() {
 	}
 
 	console.log( buffer.length );
-	var temp = buffer.join( '' );
+	var temp = buffer.join( "\n" );
 	
 	if ( !args.minify ){
 
-		fs.writeFileSync( output,temp, 'utf8' );
+		fs.writeFileSync( output, temp, 'utf8' );
 
 	} else {
 
