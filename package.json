@@ -24,9 +24,5 @@
     "licenses": [{
         "type": "The MIT License",
         "url": "https://raw.github.com/mrdoob/three.js/master/LICENSE"
-    }],
-
-    "scripts" : {
-        "install" : "grunt"
-    }
+    }]
 }
