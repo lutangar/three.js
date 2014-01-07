@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         exec: {
             build: {
                 cwd: './utils/build/',
@@ -10,17 +11,19 @@ module.exports = function(grunt) {
                 command: 'node build.js --include common --include extras --minify --output ../../build/three.min.js'
             }
         },
-
-        browserify2: {
-            compile: {
-                entry: './build/three.js',
-                compile: './three.js'
+        concat: {
+            node: {
+                src: [
+                    'build/three.js',
+                    'utils/npm/footer.js'
+                ],
+                dest: '<%= pkg.name %>'
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-browserify2');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['exec', 'browserify2:compile']);
+    grunt.registerTask('default', ['concat', 'exec']);
 };
