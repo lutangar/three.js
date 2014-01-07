@@ -1,3 +1,4 @@
+var self = self || {};
 /**
  * @author mrdoob / http://mrdoob.com/
  * @author Larry Battle / http://bateru.com/news

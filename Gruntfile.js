@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         concat: {
             node: {
                 src: [
+                    'utils/npm/header.js',
                     'build/three.js',
                     'utils/npm/footer.js'
                 ],
