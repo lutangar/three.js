@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     'build/three.js',
                     'utils/npm/footer.js'
                 ],
-                dest: '<%= pkg.name %>'
+                dest: '<%= pkg.name %>.js'
             }
         }
     });
